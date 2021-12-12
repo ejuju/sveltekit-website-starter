@@ -1,19 +1,135 @@
 <script>
 	import HomeIntro from '$lib/components/HomeIntro.svelte';
+	import Header from '$lib/components/Header.svelte';
+	import PageMeta from '$lib/components/PageMeta.svelte';
+
+	const components = [
+		{
+			title: 'Header [x]',
+			description:
+				'Used for SEO. Helps set page meta data easily (including title, meta description, json-ld, OG stuff)'
+		},
+		{
+			title: 'Footer [ ]',
+			description:
+				'Used for SEO. Helps set page meta data easily (including title, meta description, json-ld, OG stuff)'
+		},
+		{
+			title: 'PageMeta [ ]',
+			description:
+				'Used for SEO. Helps set page meta data easily (including title, meta description, json-ld, OG stuff)'
+		},
+		{
+			title: 'HomeIntro [x]',
+			description: 'Home page intro section. Outsourced for convenience'
+		},
+		{
+			title: 'FaqItem [ ]',
+			description: 'FAQs == good'
+		}
+	];
 </script>
+
+<PageMeta title="Home" description="I'm the page meta description" />
 
 <main>
 	<HomeIntro />
 
 	<section class="Overview">
 		<h2>Overview</h2>
+		<p>Here's what included in the starter template</p>
+		<ul>
+			<li>[ ] SSG</li>
+			<li>[x] SCSS</li>
+			<li>[ ] TypeScript</li>
+			<li>[ ] <a href="/page-that-doesnt-exist">Error / 404 Page</a></li>
+			<li>[x] Global styles</li>
+			<li>[x] Icons</li>
+			<li>[X] Basic components</li>
+			<li>[ ] Easy config</li>
+		</ul>
+	</section>
+
+	<section class="Components">
+		<h2>Basic components</h2>
+		<div class="Wrap">
+			{#each components as c}
+				<section class="Item">
+					<h3>{c.title}</h3>
+					<p>{c.description}</p>
+					{#if c.component}
+						<div class="WrapComponent">
+							<svelte:component this={c.component} />
+						</div>
+					{/if}
+				</section>
+			{/each}
+		</div>
 	</section>
 </main>
 
 <style lang="scss">
 	main {
-		.Overview {
+		padding-bottom: var(--s-pagebottom);
+
+		& > :global(.HomeIntro) {
 			min-height: 100vh;
+		}
+
+		.Overview,
+		.Components {
+			margin-top: 3rem;
+			padding: 0 var(--s-s);
+		}
+
+		.Overview {
+			p {
+				margin-top: 0.5rem;
+			}
+
+			ul {
+				margin-top: 1rem;
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.5rem;
+				li {
+					padding: 0.125rem 0.5rem;
+					border: solid 1px var(--c-bg-2);
+				}
+			}
+		}
+
+		.Components {
+			.Wrap {
+				margin-top: 0.5rem;
+
+				display: grid;
+				grid-template-columns: 1fr;
+				gap: 1rem;
+
+				@media (min-width: 800px) {
+					grid-template-columns: 1fr 1fr 1fr;
+				}
+
+				.Item {
+					padding: 1rem;
+					border: solid var(--bw) var(--c-bg-1);
+					max-height: 50vh;
+
+					h3 {
+						font-family: var(--font-mono);
+					}
+
+					p {
+						margin-top: 0.25rem;
+					}
+
+					.WrapComponent {
+						height: 100%;
+						margin-top: 1rem;
+					}
+				}
+			}
 		}
 	}
 </style>

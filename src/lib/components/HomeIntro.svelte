@@ -11,6 +11,7 @@
 
 <section class="HomeIntro">
 	<h1>SvelteKit Starter Template</h1>
+	<p>SSG, TypeScript, SCSS, global styles, basic components, and more</p>
 	<nav>
 		<button class="btn" on:click={scrollDown}><ArrowDown />Scroll down</button>
 	</nav>
@@ -30,11 +31,11 @@
 				</filter>
 			</defs>
 			<g filter="url(#blur1)">
-				<circle cx="900" cy="0" fill="#FF0066" r="420" />
-				<circle cx="0" cy="900" fill="#FF0066" r="420" />
-				<circle cx="900" cy="900" fill="#6600FF" r="420" />
-				<circle cx="791" cy="387" fill="#FF0066" r="420" />
-				<circle cx="551" cy="866" fill="#6600FF" r="420" />
+				<circle cx="900" cy="0" fill="var(--c-2)" r="420" />
+				<circle cx="0" cy="900" fill="var(--c-2)" r="420" />
+				<circle cx="900" cy="900" fill="var(--c-1)" r="420" />
+				<circle cx="791" cy="387" fill="var(--c-2)" r="420" />
+				<circle cx="551" cy="866" fill="var(--c-1)" r="420" />
 			</g>
 		</svg>
 	</div>
@@ -43,15 +44,20 @@
 <style lang="scss">
 	.HomeIntro {
 		position: relative;
-		min-height: 100vh;
+		min-height: calc(100vh - 3rem);
 		padding: 1rem;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		text-align: center;
 
 		h1 {
-			text-align: center;
+		}
+
+		p {
+			margin-top: 0.5rem;
+			max-width: 40ch;
 		}
 
 		nav {
@@ -66,9 +72,9 @@
 			right: 0;
 			bottom: 0;
 
-			background: #6600ff;
+			background: var(--c-1);
 			svg {
-				height: 100vh;
+				height: 100%;
 				width: 100%;
 			}
 		}

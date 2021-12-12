@@ -1,0 +1,10 @@
+:root {
+	--s-s: 1rem;
+	@media (min-width: 1000px) {
+		--s-s: 3rem;
+	}
+
+	--s-pagetop: 2rem;
+	--s-pagebottom: 6rem;
+	--s-page: var(--s-pagetop) var(--s-s) var(--s-pagebottom);
+}

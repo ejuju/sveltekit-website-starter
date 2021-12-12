@@ -1,4 +1,6 @@
 <script>
+	import Header from '$lib/components/Header.svelte';
+
 	import '../styles/manifest.scss';
 
 	let navigating = false;
@@ -13,6 +15,7 @@
 	<div class="NavigatingIndicator" class:navigating />
 {/if}
 
+<Header />
 <slot />
 
 <style lang="scss">

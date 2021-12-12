@@ -26,7 +26,7 @@
 
 <style lang="scss">
 	main {
-		padding: var(--p-page);
+		padding: var(--s-page);
 		display: flex;
 		flex-direction: column;
 
