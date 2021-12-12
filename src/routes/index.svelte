@@ -47,6 +47,8 @@
 			<li>[x] Icons</li>
 			<li>[X] Basic components</li>
 			<li>[ ] Easy config</li>
+			<li>[ ] Sitemap.xml</li>
+			<li>[ ] SEO friendly (robots.txt, sitemap, meta data, etc.)</li>
 		</ul>
 	</section>
 
@@ -66,6 +68,15 @@
 			{/each}
 		</div>
 	</section>
+
+	<section class="UpcomingFeatures">
+		<h2>Upcoming features</h2>
+		<p>Future features</p>
+		<ul>
+			<li>[ ] i18n</li>
+			<li>[ ] Headless CMS integration (Strapi?)</li>
+		</ul>
+	</section>
 </main>
 
 <style lang="scss">
@@ -77,12 +88,14 @@
 		}
 
 		.Overview,
-		.Components {
-			margin-top: 3rem;
+		.Components,
+		.UpcomingFeatures {
+			margin-top: 4rem;
 			padding: 0 var(--s-s);
 		}
 
-		.Overview {
+		.Overview,
+		.UpcomingFeatures {
 			p {
 				margin-top: 0.5rem;
 			}

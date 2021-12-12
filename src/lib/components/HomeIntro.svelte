@@ -44,16 +44,13 @@
 <style lang="scss">
 	.HomeIntro {
 		position: relative;
-		min-height: calc(100vh - 3rem);
+		min-height: calc(100vh - 3.5rem);
 		padding: 1rem;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		text-align: center;
-
-		h1 {
-		}
 
 		p {
 			margin-top: 0.5rem;
