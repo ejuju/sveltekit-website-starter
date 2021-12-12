@@ -1,2 +1,19 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+	import HomeIntro from '$lib/components/HomeIntro.svelte';
+</script>
+
+<main>
+	<HomeIntro />
+
+	<section class="Overview">
+		<h2>Overview</h2>
+	</section>
+</main>
+
+<style lang="scss">
+	main {
+		.Overview {
+			min-height: 100vh;
+		}
+	}
+</style>

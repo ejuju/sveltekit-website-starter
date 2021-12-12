@@ -1,0 +1,76 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	border: none;
+	color: inherit;
+	font: inherit;
+}
+
+body {
+	font-family: var(--font);
+	font-size: 100%;
+	line-height: 1.5; /* may need to be adjusted depending on font family */
+
+	color: var(--c-txt);
+	background: var(--c-bg);
+	transition: background 0.1s ease-in-out; /* For dark / light theme transition  */
+}
+
+::-moz-selection {
+	color: var(--clr-1-c);
+	background: var(--clr-1);
+}
+::selection {
+	color: var(--clr-1-c);
+	background: var(--clr-1);
+}
+
+h1,
+h2,
+h3 {
+	line-height: 1.25;
+	font-family: var(--font-h);
+}
+h1 {
+	font-weight: var(--fw-bold);
+	font-size: var(--fs-h1);
+}
+h2 {
+	font-weight: var(--fw-bold);
+	font-size: var(--fs-h2);
+}
+h3 {
+	font-weight: var(--fw-bold);
+	font-size: var(--fs-h3);
+}
+
+a {
+	text-decoration: underline;
+}
+
+button {
+	background: none;
+	border: none;
+	width: max-content;
+	text-align: left;
+	cursor: pointer;
+	font-weight: inherit;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+svg {
+	width: 1em;
+	height: 1em;
+}
