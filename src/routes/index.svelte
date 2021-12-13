@@ -2,6 +2,7 @@
 	import HomeIntro from '$lib/components/HomeIntro.svelte';
 	import Header from '$lib/components/Header.svelte';
 	import PageMeta from '$lib/components/PageMeta.svelte';
+	import FaqItem from '$lib/components/FaqItem.svelte';
 
 	const components = [
 		{
@@ -69,13 +70,15 @@
 		</div>
 	</section>
 
-	<section class="UpcomingFeatures">
-		<h2>Upcoming features</h2>
-		<p>Future features</p>
-		<ul>
-			<li>[ ] i18n</li>
-			<li>[ ] Headless CMS integration (Strapi?)</li>
-		</ul>
+	<section class="FAQ">
+		<h2>FAQ</h2>
+		<FaqItem question="Are there upcoming features ?">
+			<p>Yes...</p>
+			<ul>
+				<li>[ ] i18n</li>
+				<li>[ ] Headless CMS integration (Strapi?)</li>
+			</ul>
+		</FaqItem>
 	</section>
 </main>
 
@@ -89,13 +92,13 @@
 
 		.Overview,
 		.Components,
-		.UpcomingFeatures {
+		.FAQ {
 			margin-top: 4rem;
 			padding: 0 var(--s-s);
 		}
 
 		.Overview,
-		.UpcomingFeatures {
+		.FAQ {
 			p {
 				margin-top: 0.5rem;
 			}
@@ -142,6 +145,12 @@
 						margin-top: 1rem;
 					}
 				}
+			}
+		}
+
+		.FAQ {
+			:global(.FaqItem) {
+				margin-top: 1rem;
 			}
 		}
 	}
