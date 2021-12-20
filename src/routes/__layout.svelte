@@ -1,19 +1,14 @@
 <script>
+	import { navigating } from '$app/stores';
+
 	import Footer from '$lib/components/Footer.svelte';
 	import Header from '$lib/components/Header.svelte';
 
 	import '../styles/manifest.scss';
-
-	let navigating = false;
 </script>
 
-<svelte:window
-	on:sveltekit:navigation-start={() => (navigating = true)}
-	on:sveltekit:navigation-end={() => (navigating = false)}
-/>
-
-{#if navigating}
-	<div class="NavigatingIndicator" class:navigating />
+{#if $navigating}
+	<div class="NavigatingIndicator" class:navigating={$navigating} />
 {/if}
 
 <Header />

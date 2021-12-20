@@ -40,10 +40,10 @@
 		<h2>Overview</h2>
 		<p>Here's what included in the starter template</p>
 		<ul>
-			<li>[ ] SSG</li>
+			<li>[x] SSG</li>
 			<li>[x] SCSS</li>
-			<li>[ ] TypeScript</li>
-			<li>[ ] <a href="/page-that-doesnt-exist">Error / 404 Page</a></li>
+			<li>[x] TypeScript</li>
+			<li>[x] <a href="/page-that-doesnt-exist">Error / 404 Page</a></li>
 			<li>[x] Global styles</li>
 			<li>[x] Icons</li>
 			<li>[X] Basic components</li>
