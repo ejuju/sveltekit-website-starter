@@ -9,6 +9,7 @@
 - [x] Basic components (Header, Footer, FaqItem)
 - [] Prevent FOUC
 - [] Add setup instructions
+- [] Add hide-scrollbar util class
 
 # Setup checklist
 
